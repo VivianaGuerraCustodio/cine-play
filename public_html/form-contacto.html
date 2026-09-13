@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+
+    <title>Document</title>
+</head>
+
+<body>
+            <header>
+            <h1>
+                <span>CINE</span><span>PLAY</span>
+            </h1>
+
+            <p>La mejor experiencia cinematográfica</p>
+
+            <!-- Menú de navegación -->
+            <nav>
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="pago-contacto.html">Pago</a></li>
+                <li><a href="form-contacto.html">Contacto</a></li>
+
+                </ul>
+            </nav>    
+        </header>
+    <main>
+        <!-- FORMULARIO DE CONTACTO -->
+        <section>
+            <h2>Formulario de Contacto</h2>
+
+            <form action="tabla-contacto.html" method="get">
+
+                <fieldset>
+                    <legend>Envíanos tu Mensaje</legend>
+
+                    <p>
+                        <label for="nombre-contacto">
+                            Nombre completo:
+                        </label><br>
+
+                        <input type="text" id="nombre-contacto" name="nombre_contacto" placeholder="Ej. Ana Gómez"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="email-contacto">
+                            Correo electrónico:
+                        </label><br>
+
+                        <input type="email" id="email-contacto" name="email_contacto" placeholder="ejemplo@correo.com"
+                            required>
+                    </p>
+
+                    <p>
+                        <label for="asunto">
+                            Asunto:
+                        </label><br>
+
+                        <select id="asunto" name="asunto" required>
+                            <option value="">
+                                -- Selecciona el motivo --
+                            </option>
+
+                            <option value="consulta">
+                                Consulta General
+                            </option>
+
+                            <option value="reclamo">
+                                Reclamo / Queja
+                            </option>
+
+                            <option value="sugerencia">
+                                Sugerencia
+                            </option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="mensaje">
+                            Mensaje:
+                        </label><br>
+
+                        <textarea id="mensaje" name="mensaje" rows="5" cols="40"
+                            placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </p>
+
+                </fieldset>
+
+                <p>
+                    <button type="submit">
+                        Enviar Mensaje
+                    </button>
+                </p>
+
+            </form>
+        </section>
+
+    </main>
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>&copy; 2026 CinePlay. Todos los derechos reservados.</p>
+    </footer>
+</body>
+
+</html>

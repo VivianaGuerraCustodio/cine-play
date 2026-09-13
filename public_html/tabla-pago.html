@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePlay - Comprobante de Pago</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+    <header>
+        <h1><span>CINE</span><span>PLAY</span></h1>
+    </header>
+
+    <main>
+        <h2>¡Pago Realizado con Éxito!</h2>
+        <p>Gracias por tu compra. A continuación, te mostramos el detalle de tus entradas:</p>
+
+        <div class="table-container">
+            <table>
+                <caption>Comprobante de Compra</caption>
+                <thead>
+                    <tr>
+                        <th>Concepto / Detalle</th>
+                        <th>Información de la Reserva</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Película Seleccionada:</strong></td>
+                        <td id="res-pelicula">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Horario / Función:</strong></td>
+                        <td id="res-funcion">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Titular de la Tarjeta:</strong></td>
+                        <td id="res-titular">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cantidad de Entradas:</strong></td>
+                        <td id="res-cantidad">Cargando...</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td>Monto Total Pagado:</td>
+                        <td id="res-total">Cargando...</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </div>
+
+        <div class="acciones">
+            <a href="pago-contacto.html" class="btn-volver">Volver a Reservas</a>
+            <a href="index.html" class="btn-volver">Ir al Inicio</a>
+        </div>
+    </main>
+
+    <script>
+        // Capturar los valores enviados desde el formulario en la URL
+        const params = new URLSearchParams(window.location.search);
+
+        const pelicula = params.get('pelicula') || 'No seleccionada';
+        const funcion = params.get('funcion') || 'No asignado';
+        const titular = params.get('nombre_tarjeta') || 'No registrado';
+        const cantidad = parseInt(params.get('cantidad')) || 1;
+
+        // Cálculo dinámico del precio total (Ejemplo: S/ 15.00 por entrada)
+        const precioUnitario = 15;
+        const total = cantidad * precioUnitario;
+
+        // Insertar los datos reales dentro de las celdas de la tabla
+        document.getElementById('res-pelicula').innerText = pelicula;
+        document.getElementById('res-funcion').innerText = funcion;
+        document.getElementById('res-titular').innerText = titular;
+        document.getElementById('res-cantidad').innerText = cantidad + ' entrada(s)';
+        document.getElementById('res-total').innerText = 'S/ ' + total.toFixed(2);
+    </script>
+</body>
+</html>

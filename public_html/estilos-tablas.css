@@ -1,0 +1,123 @@
+/* Configuración General */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #111;
+    color: #fff;
+    padding: 15px 0;
+    margin-bottom: 20px;
+}
+
+header h1 span:first-child {
+    color: #e50914;
+}
+
+header h1 span:last-child {
+    color: #fff;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: #004080;
+    text-align: center;
+}
+
+main > p {
+    text-align: center;
+}
+
+/* Configuración para diseño adaptativo en móviles */
+.table-container {
+    overflow-x: auto;
+}
+
+/* Estructura principal de la tabla */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 500px;
+    margin: 20px auto;
+    font-family: Arial, sans-serif;
+}
+
+/* Título de la tabla */
+caption {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Bordes y espaciado de celdas */
+th, td {
+    border: 1px solid #555;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Estilos específicos del encabezado */
+th {
+    background-color: #004080;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Colores alternos para legibilidad */
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Estilos interactivos */
+tr:hover {
+    background-color: #d0e7ff;
+}
+
+/* Estilos para el pie de tabla */
+tfoot td {
+    background-color: #333;
+    color: white;
+    text-align: right;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Botones de acción al final */
+.acciones {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.btn-volver {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.btn-volver:hover {
+    background-color: #002b55;
+}

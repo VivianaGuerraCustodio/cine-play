@@ -1,0 +1,219 @@
+/* ==========================================
+   1. ESTILOS GENERALES
+   ========================================== */
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* ==========================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================== */
+
+header {
+    background-color: #000000;
+    text-align: center;
+    padding: 25px 15px 15px 15px;
+    border-bottom: 3px solid #e50914;
+}
+
+/* Nombre de la marca */
+
+header h1 {
+    font-size: 38px;
+    margin: 0;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+header h1 span:nth-child(1) {
+    color: #ffffff;
+}
+
+header h1 span:nth-child(2) {
+    color: #e50914;
+}
+
+header p {
+    color: #cccccc;
+    font-size: 14px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+
+/* Menú de navegación */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 12px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 5px 8px;
+}
+
+nav a:hover {
+    color: #e50914;
+    border-bottom: 2px solid #e50914;
+}
+
+
+/* ==========================================
+   3. CONTENIDO PRINCIPAL
+   ========================================== */
+
+main {
+    width: 90%;
+    max-width: 850px;
+    margin: 30px auto;
+}
+
+section {
+    background-color: #1e1e1e;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    border: 1px solid #333333;
+}
+
+h2 {
+    color: #ffffff;
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #d4af37;
+}
+
+p {
+    line-height: 1.6;
+    color: #dddddd;
+}
+
+ul {
+    color: #dddddd;
+    line-height: 1.8;
+}
+
+
+/* ==========================================
+   4. FORMULARIOS
+   ========================================== */
+
+form {
+    margin-top: 15px;
+}
+
+fieldset {
+    border: 1px solid #444444;
+    border-radius: 6px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #181818;
+}
+
+legend {
+    color: #d4af37;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0 10px;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+
+/* Campos de los formularios */
+
+input[type="text"],
+input[type="number"],
+input[type="month"],
+input[type="password"],
+input[type="email"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #2a2a2a;
+    border: 1px solid #555555;
+    color: #ffffff;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+
+/* Efecto al seleccionar un campo */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #d4af37;
+    outline: none;
+    background-color: #333333;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================
+   5. BOTONES
+   ========================================== */
+
+button[type="submit"] {
+    background-color: #e50914;
+    color: #ffffff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #b20710;
+}
+
+
+/* ==========================================
+   6. PIE DE PÁGINA
+   ========================================== */
+
+footer {
+    background-color: #000000;
+    text-align: center;
+    padding: 20px 10px;
+    border-top: 1px solid #222222;
+}
+
+footer p {
+    color: #777777;
+    font-size: 13px;
+    margin: 0;
+}
+

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>CinePlay - Horarios</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .table-container {
+            overflow-x: auto;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 600px;
+            font-family: sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #d4af37;
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #d4af37;
+            color: #121212;
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        tr:nth-child(even) {
+            background-color: #1e1e1e;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #121212;
+        }
+
+        tr:hover {
+            background-color: #333333;
+        }
+
+        caption {
+            font-size: 1.5em;
+            color: #d4af37;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        tfoot td {
+            background-color: #1e1e1e;
+            font-style: italic;
+            color: #aaaaaa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1><span>CINE</span><span>PLAY</span></h1>
+        <p>Consulta nuestra programación diaria</p>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="pago-contacto.html">Pago</a></li>
+                <li><a href="form-contacto.html">Contacto</a></li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="table-container">
+                <table>
+                    <caption>Cartelera de Hoy</caption>
+                    <thead>
+                        <tr>
+                            <th>Sala</th>
+                            <th>Película</th>
+                            <th>Clasificación</th>
+                            <th>Horarios</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="2">Sala 1</td>
+                            <td>El Día de la Revelación</td>
+                            <td>+14</td>
+                            <td>05:00 p. m.</td>
+                        </tr>
+                        <tr>
+                            <td>La Odisea</td>
+                            <td>Todos</td>
+                            <td>08:00 p. m.</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Sala 2</td>
+                            <td>The End of Oak Street</td>
+                            <td>+18</td>
+                            <td>06:00 p. m.</td>
+                        </tr>
+                        <tr>
+                            <td>La Noche del Demonio</td>
+                            <td>+18</td>
+                            <td>09:45 p. m.</td>
+                        </tr>
+                        <tr>
+                            <td>Sala 3</td>
+                            <td colspan="2">El Diablo Viste a la Moda 2 (Función Especial)</td>
+                            <td>07:00 p. m.</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="4">Llega 15 minutos antes para comprar tus snacks sin apuros.</td>
+                        </tr>
+                    </tfoot>
+                </table>
+            </div>
+        </section>
+
+        <section style="text-align: center; background-color: transparent; border: none;">
+            <p>¿Ya decidiste qué película ver?</p>
+            <form action="pago-contacto.html" method="get">
+                <button type="submit">Comprar Entradas Aquí</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CinePlay. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

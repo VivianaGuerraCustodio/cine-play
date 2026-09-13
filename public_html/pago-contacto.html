@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>CinePlay - Pago y Contacto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Conexión con la hoja de estilos -->
+        <link rel="stylesheet" href="estilos.css">
+    </head>
+
+    <body>
+
+        <!-- ENCABEZADO Y LOGO DE CINEPLAY -->
+        <header>
+            <h1>
+                <span>CINE</span><span>PLAY</span>
+            </h1>
+
+            <p>Reserva de Entradas y Atención al Cliente</p>
+
+            <!-- Menú de navegación -->
+            <nav>
+                <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="horarios.html">Horarios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="pago-contacto.html">Pago</a></li>
+                <li><a href="form-contacto.html">Contacto</a></li>
+
+                </ul>
+            </nav>
+        </header>
+
+        <!-- CONTENIDO PRINCIPAL -->
+        <main>
+
+            <!-- FORMULARIO DE PAGO -->
+            <section>
+                <h2>Formulario de Pago</h2>
+
+                <form action="tabla-pago.html" method="get">
+
+                    <fieldset>
+                        <legend>Detalles de la Compra</legend>
+
+                        <p>
+                            <label for="pelicula">
+                                Película seleccionada:
+                            </label><br>
+
+                            <select id="pelicula" name="pelicula" required>
+                                <option value="">
+                                    -- Selecciona una película --
+                                </option>
+
+                                <option value="moda2">
+                                    El Diablo Viste a la Moda 2
+                                </option>
+
+                                <option value="revelacion">
+                                    El Día de la Revelación
+                                </option>
+
+                                <option value="endoakstreet">
+                                    The End of Oak Street
+                                </option>
+
+                                <option value="noche-demonio">
+                                    La Noche del Demonio
+                                </option>
+
+                                <option value="odisea">
+                                    La Odisea
+                                </option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="funcion">
+                                Horario / Función:
+                            </label><br>
+
+                            <select id="funcion" name="funcion" required>
+                                <option value="">
+                                    -- Selecciona un horario --
+                                </option>
+
+                                <option value="17:00">
+                                    05:00 PM - El Día de la Revelación
+                                </option>
+
+                                <option value="18:00">
+                                    06:00 PM - The End of Oak Street
+                                </option>
+
+                                <option value="19:00">
+                                    07:00 PM - El Diablo Viste a la Moda 2
+                                </option>
+
+                                <option value="20:00">
+                                    08:00 PM - La Odisea
+                                </option>
+
+                                <option value="21:45">
+                                    09:45 PM - La Noche del Demonio
+                                </option>
+                            </select>
+                        </p>
+
+                        <p>
+                            <label for="cantidad">
+                                Cantidad de entradas:
+                            </label><br>
+
+                            <input
+                                type="number"
+                                id="cantidad"
+                                name="cantidad"
+                                min="1"
+                                max="10"
+                                value="1"
+                                required>
+                        </p>
+
+                    </fieldset>
+
+
+                    <fieldset>
+                        <legend>Información de la Tarjeta</legend>
+
+                        <p>
+                            <label for="nombre-tarjeta">
+                                Nombre del titular:
+                            </label><br>
+
+                            <input
+                                type="text"
+                                id="nombre-tarjeta"
+                                name="nombre_tarjeta"
+                                placeholder="Ej. Juan Pérez"
+                                required>
+                        </p>
+
+                        <p>
+                            <label for="numero-tarjeta">
+                                Número de tarjeta:
+                            </label><br>
+
+                            <input
+                                type="text"
+                                id="numero-tarjeta"
+                                name="numero_tarjeta"
+                                placeholder="Ingrese 16 dígitos"
+                                maxlength="16"
+                                required>
+                        </p>
+
+                        <p>
+                            <label for="expiracion">
+                                Fecha de expiración:
+                            </label><br>
+
+                            <input
+                                type="month"
+                                id="expiracion"
+                                name="expiracion"
+                                required>
+                        </p>
+
+                        <p>
+                            <label for="cvv">
+                                Código de seguridad (CVV):
+                            </label><br>
+
+                            <input
+                                type="password"
+                                id="cvv"
+                                name="cvv"
+                                placeholder="123"
+                                maxlength="4"
+                                required>
+                        </p>
+
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">
+                            Pagar Entradas
+                        </button>
+                    </p>
+
+                </form>
+            </section>
+
+
+
+
+        </main>
+
+        <!-- PIE DE PÁGINA -->
+        <footer>
+            <p>&copy; 2026 CinePlay. Todos los derechos reservados.</p>
+        </footer>
+
+    </body>
+</html>

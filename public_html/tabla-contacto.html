@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinePlay - Confirmación de Mensaje</title>
+    <link rel="stylesheet" href="estilos-tablas.css">
+</head>
+<body>
+    <header>
+        <h1><span>CINE</span><span>PLAY</span></h1>
+    </header>
+
+    <main>
+        <h2>¡Mensaje Enviado Correctamente!</h2>
+        <p>Hemos recibido tu solicitud. Un asesor de atención al cliente responderá en breve.</p>
+
+        <div class="table-container">
+            <table>
+                <caption>Resumen de Consulta Registrada</caption>
+                <thead>
+                    <tr>
+                        <th>Campo</th>
+                        <th>Información Registrada</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Nombre Completo:</strong></td>
+                        <td id="res-nombre">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Correo Electrónico:</strong></td>
+                        <td id="res-email">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Motivo / Asunto:</strong></td>
+                        <td id="res-asunto">Cargando...</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Mensaje Enviado:</strong></td>
+                        <td id="res-mensaje">Cargando...</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="acciones">
+            <a href="pago-contacto.html" class="btn-volver">Volver al Formulario</a>
+            <a href="index.html" class="btn-volver">Ir al Inicio</a>
+        </div>
+    </main>
+
+    <script>
+        // Capturar los valores enviados desde el formulario en la URL
+        const params = new URLSearchParams(window.location.search);
+
+        // Insertar los datos reales dentro de la tabla
+        document.getElementById('res-nombre').innerText = params.get('nombre_contacto') || 'No registrado';
+        document.getElementById('res-email').innerText = params.get('email_contacto') || 'No registrado';
+        document.getElementById('res-asunto').innerText = params.get('asunto') || 'No registrado';
+        document.getElementById('res-mensaje').innerText = params.get('mensaje') || 'No registrado';
+    </script>
+</body>
+</html>
