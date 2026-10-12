@@ -1,90 +1,183 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <title>CinePlay - Inicio</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Conexión con la hoja de estilos -->
-        <link rel="stylesheet" href="estilos.css">
-    </head>
-
-    <body>
-
-        <!-- ENCABEZADO Y LOGO DE CINEPLAY -->
-        <header>
-            <h1>
-                <span>CINE</span><span>PLAY</span>
-            </h1>
-
-            <p>La mejor experiencia cinematográfica</p>
-
-            <!-- Menú de navegación -->
-            <nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descubre la cartelera de CinePlay, consulta horarios y disfruta del cine con amigos y familia.">
+    <title>CinePlay — Vive el cine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="#inicio" aria-label="CinePlay, inicio">CINE<span>PLAY</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>
+                <i class="bi bi-list" aria-hidden="true"></i><span>Menú</span>
+            </button>
+            <nav id="menu-principal" aria-label="Navegación principal">
                 <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="horarios.html">Horarios</a></li>
-                <li><a href="galeria.html">Galería</a></li>
-                <li><a href="pago-contacto.html">Pago</a></li>
-                <li><a href="form-contacto.html">Contacto</a></li>
+                    <li><a href="#inicio" aria-current="location">Inicio</a></li>
+                    <li><a href="#cartelera">Cartelera</a></li>
+                    <li><a href="#horarios">Horarios</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#experiencia">Experiencia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
-        </header>
-
-        <!-- CONTENIDO PRINCIPAL -->
-        <main>
-
-            <!-- Sección de bienvenida -->
-            <section>
-                <h2>Bienvenido a CinePlay</h2>
-
-                <p>
-                    Disfruta de los últimos estrenos con la mejor
-                    experiencia cinematográfica.
-                </p>
-
-                <p>
-                    Encuentra tus películas favoritas y consulta
-                    nuestros horarios de atención.
-                </p>
-            </section>
-
-            <!-- Sección de información -->
-            <section>
-                <h2>Disfruta la experiencia CinePlay</h2>
-
-                <p>
-                    En CinePlay encontrarás diferentes opciones de
-                    entretenimiento para disfrutar con amigos y familiares.
-                </p>
-
-                <p>
-                    Conoce nuestra cartelera, revisa los horarios
-                    y elige la función que prefieras.
-                </p>
-            </section>
-
-            <!-- Sección de invitación -->
-            <section>
-                <h2>¡Prepárate para disfrutar!</h2>
-
-                <p>
-                    Explora nuestra galería de películas y consulta
-                    los horarios disponibles.
-                </p>
-
-                <p>
-                    También puedes ingresar a la sección de Pago y
-                    Contacto para realizar una reserva simulada.
-                </p>
-            </section>
-
-        </main>
-
-        <!-- PIE DE PÁGINA -->
-        <footer>
-            <p>&copy; 2026 CinePlay. Todos los derechos reservados.</p>
-        </footer>
-
-    </body>
+        </div>
+    </header>
+    <main id="contenido">
+        <section class="hero container" id="inicio" aria-labelledby="hero-title">
+            <div class="hero-copy">
+                <p class="eyebrow"><i class="bi bi-film" aria-hidden="true"></i> Tu próxima gran historia</p>
+                <h1 id="hero-title">El cine se vive.<br><span>La emoción se comparte.</span></h1>
+                <p>Bienvenido a CinePlay. Descubre historias que te atrapan y encuentra la función perfecta para disfrutar con quienes más quieres.</p>
+                <a class="button" href="#cartelera">Explorar cartelera <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+                <a class="text-link" href="#horarios">Consultar horarios</a>
+            </div>
+            <picture class="hero-picture">
+                <source media="(min-width: 1024px)" srcset="img/hero-1200.jpg">
+                <source media="(min-width: 768px)" srcset="img/hero-800.jpg">
+                <img src="img/hero-480.jpg" alt="Póster de La Odisea, una aventura cinematográfica" width="480" height="686" fetchpriority="high">
+            </picture>
+        </section>
+        <section class="container section" id="cartelera" aria-labelledby="cartelera-title">
+            <div class="section-heading">
+                <div><p class="eyebrow">Encuentra tu próxima película</p><h2 id="cartelera-title">Historias para todos los gustos</h2></div>
+                <a class="text-link" href="#cartelera">Ver toda la galería <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a>
+            </div>
+            <div class="movie-grid">
+                <article class="movie-card">
+                    <img src="img/Moda2.jpg" alt="Póster de El Diablo Viste a la Moda 2" width="870" height="627" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Drama</p><h3>El Diablo Viste a la Moda 2</h3><p><i class="bi bi-clock" aria-hidden="true"></i> 7:00 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+                <article class="movie-card">
+                    <img src="img/Revelacion.jpg" alt="Póster de El Día de la Revelación" width="400" height="600" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Ciencia ficción</p><h3>El Día de la Revelación</h3><p><i class="bi bi-clock" aria-hidden="true"></i> 5:00 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+                <article class="movie-card">
+                    <img src="img/NocheDemonio.jpg" alt="Póster de La Noche del Demonio" width="1000" height="1460" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Terror</p><h3>La Noche del Demonio</h3><p><i class="bi bi-clock" aria-hidden="true"></i> 9:45 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+<article class="movie-card">
+                    <img src="img/EndOakStreet.jpg" alt="Póster de The End of Oak Street" width="259" height="384" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Ciencia ficción</p><h3>The End of Oak Street</h3><p>6:00 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+<article class="movie-card">
+                    <img src="img/Odisea.jpg" alt="Póster de La Odisea" width="2100" height="3000" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Acción</p><h3>La Odisea</h3><p>8:00 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
+                </article>
+            </div>
+            <h3 class="subheading">Preestrenos - Programación de demostración</h3>
+            <div class="movie-grid">
+<article class="movie-card">
+                    <img src="img/Verity.jpg" alt="Póster de Verity" width="1080" height="1600" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Suspenso</p><h3>Verity</h3><p>01 de octubre</p></div>
+                </article>
+<article class="movie-card">
+                    <img src="img/Wildwood.jpg" alt="Póster de Wildwood" width="414" height="483" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Animación</p><h3>Wildwood</h3><p>23 de octubre</p></div>
+                </article>
+<article class="movie-card">
+                    <img src="img/HungerGames.jpg" alt="Póster de Los Juegos del Hambre: Amanecer en la Cosecha" width="455" height="674" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Ciencia ficción</p><h3>Los Juegos del Hambre: Amanecer en la Cosecha</h3><p>20 de noviembre</p></div>
+                </article>
+<article class="movie-card">
+                    <img src="img/Hexed.jpg" alt="Póster de Hechizo: Bienvenidos a Hexe" width="452" height="678" loading="lazy" decoding="async">
+                    <div class="card-copy"><p class="eyebrow">Aventura</p><h3>Hechizo: Bienvenidos a Hexe</h3><p>26 de noviembre</p></div>
+                </article>
+            </div>
+        </section>
+        <section class="container section" id="horarios" aria-labelledby="horarios-title">
+            <p class="eyebrow">Organiza tu visita</p><h2 id="horarios-title">Salas y horarios</h2>
+            <div class="table-container" tabindex="0" role="region" aria-label="Tabla de horarios con desplazamiento horizontal">
+                <table>
+                    <caption>Programación de demostración</caption>
+                    <thead><tr><th scope="col">Sala</th><th scope="col">Película</th><th scope="col">Clasificación</th><th scope="col">Horario</th></tr></thead>
+                    <tbody>
+                        <tr><td>Sala 1</td><td>El Día de la Revelación</td><td>+14</td><td>5:00 p. m.</td></tr>
+                        <tr><td>Sala 1</td><td>La Odisea</td><td>Todos</td><td>8:00 p. m.</td></tr>
+                        <tr><td>Sala 2</td><td>The End of Oak Street</td><td>+18</td><td>6:00 p. m.</td></tr>
+                        <tr><td>Sala 2</td><td>La Noche del Demonio</td><td>+18</td><td>9:45 p. m.</td></tr>
+                        <tr><td>Sala 3</td><td>El Diablo Viste a la Moda 2</td><td>Función especial</td><td>7:00 p. m.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p>Llega 15 minutos antes para elegir tus snacks sin apuros.</p>
+            <a class="button" href="#reservas">Simular reserva <i class="bi bi-ticket-perforated" aria-hidden="true"></i></a>
+        </section>
+        <section class="contacto container section" id="reservas" aria-labelledby="reservas-title">
+            <div><p class="eyebrow">Tu próxima función</p><h2 id="reservas-title">Reserva simulada</h2><p>Elige una película y su función. Precio de demostración: S/ 15.00 por entrada.</p><p class="form-note">No se realiza ningún cobro ni reserva real.</p></div>
+            <div>
+                <form id="reservation-form">
+                    <label for="funcion">Película y función</label>
+                    <select id="funcion" name="funcion" required>
+                        <option value="">Selecciona una función</option>
+                        <option value="revelacion">El Día de la Revelación - 5:00 p. m.</option>
+                        <option value="endoakstreet">The End of Oak Street - 6:00 p. m.</option>
+                        <option value="moda2">El Diablo Viste a la Moda 2 - 7:00 p. m.</option>
+                        <option value="odisea">La Odisea - 8:00 p. m.</option>
+                        <option value="noche-demonio">La Noche del Demonio - 9:45 p. m.</option>
+                    </select>
+                    <label for="titular">Nombre de la reserva</label>
+                    <input id="titular" name="titular" type="text" autocomplete="name" required maxlength="100">
+                    <label for="cantidad">Cantidad de entradas</label>
+                    <input id="cantidad" name="cantidad" type="number" min="1" max="10" step="1" value="1" required>
+                    <button class="button" type="submit">Ver resumen <i class="bi bi-ticket-perforated" aria-hidden="true"></i></button>
+                    <noscript>Activa JavaScript para probar la reserva simulada.</noscript>
+                </form>
+            </div>
+        </section>
+        <section class="container section" id="experiencia" aria-labelledby="experiencia-title">
+            <p class="eyebrow">Más que una película</p><h2 id="experiencia-title">Disfruta la experiencia CinePlay</h2>
+            <p>Explora nuestra selección de películas, organiza tu visita y comparte una tarde de entretenimiento con amigos y familiares.</p>
+            <div class="experience-grid">
+                <article class="feature"><i class="bi bi-camera-reels" aria-hidden="true"></i><h3>Elige tu historia</h3><p>Drama, aventura, ciencia ficción o terror: recorre la galería y descubre tu favorita.</p></article>
+                <article class="feature"><i class="bi bi-calendar-event" aria-hidden="true"></i><h3>Planea tu visita</h3><p>Consulta las salas y horarios. Llega con tiempo para elegir tus snacks.</p></article>
+                <article class="feature"><i class="bi bi-ticket-perforated" aria-hidden="true"></i><h3>Prueba una reserva</h3><p>Conoce nuestro formulario de reserva para tu próxima función.</p><a href="#reservas">Ir a reservas</a></article>
+            </div>
+        </section>
+        <section class="contacto container section" id="contacto" aria-labelledby="contacto-title">
+            <div><p class="eyebrow">Estamos para escucharte</p><h2 id="contacto-title">Conversemos</h2><p>Comparte tus preguntas, ideas o sugerencias para mejorar la experiencia CinePlay.</p><p class="form-note">Formulario :</p></div>
+            <form id="contact-form">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" placeholder="Tu nombre completo" required maxlength="100">
+                <label for="correo">Correo electrónico</label>
+                <input id="correo" name="correo" type="email" autocomplete="email" placeholder="tu@correo.com" required maxlength="254">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="¿En qué podemos ayudarte?" required maxlength="2000"></textarea>
+                <button class="button" type="submit">Enviar mensaje <i class="bi bi-send" aria-hidden="true"></i></button>
+                <noscript>Activa JavaScript para probar el formulario de demostración.</noscript>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="container footer-inner">
+            <div><a class="brand" href="#inicio">CINE<span>PLAY</span></a><p>&copy; 2026 CinePlay. Todos los derechos reservados.</p><p>Proyecto académico · Reservas y contacto de demostración.</p></div>
+            <div class="social-icons" aria-label="Redes sociales de referencia">
+                <a href="https://www.instagram.com/" aria-label="Instagram (sitio general)"><i class="bi bi-instagram" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/" aria-label="Facebook (sitio general)"><i class="bi bi-facebook" aria-hidden="true"></i></a>
+                <a href="https://www.youtube.com/" aria-label="YouTube (sitio general)"><i class="bi bi-youtube" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </footer>
+    <dialog id="simulation-modal" class="simulation-modal" aria-labelledby="simulation-title" aria-describedby="simulation-message simulation-timeout">
+        <button id="simulation-close" class="modal-close" type="button" aria-label="Cerrar simulación" autofocus>&times;</button>
+        <h2 id="simulation-title"></h2>
+        <p id="simulation-message"></p>
+        <dl id="simulation-details" hidden>
+            <dt>Función</dt><dd id="summary-function"></dd>
+            <dt>Nombre</dt><dd id="summary-name"></dd>
+            <dt>Entradas</dt><dd id="summary-count"></dd>
+            <dt>Total simulado</dt><dd id="summary-total"></dd>
+        </dl>
+        <p id="simulation-timeout" class="form-note">Se cerrará automáticamente en 10 segundos. 🚀</p>
+    </dialog>
+</body>
 </html>
