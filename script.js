@@ -25,14 +25,43 @@ document.addEventListener("keydown", (event) => {
 window.matchMedia("(min-width: 1024px)").addEventListener("change", closeMenu);
 
 const navLinks = [...menu.querySelectorAll('a[href^="#"]')];
-function updateCurrentSection() {
-    const target = window.location.hash || "#inicio";
-    navLinks.forEach((link) => {
-        if (link.getAttribute("href") === target) link.setAttribute("aria-current", "location");
-        else link.removeAttribute("aria-current");
+const views = [...document.querySelectorAll("main > section[id]")];
+const sidebar = document.querySelector(".sidebar");
+const viewNames = {
+    inicio: "Inicio",
+    cartelera: "Galería",
+    horarios: "Horarios",
+    reservas: "Reservas",
+    experiencia: "Experiencia",
+    contacto: "Contacto"
+};
+
+function updateCurrentSection(moveFocus = false) {
+    const requested = window.location.hash.slice(1);
+    const view = views.find((section) => section.id === requested) || views[0];
+    views.forEach((section) => {
+        section.hidden = section !== view;
     });
+    const isHome = view.id === "inicio";
+    sidebar.hidden = !isHome;
+    document.body.classList.toggle("home-view", isHome);
+    navLinks.forEach((link) => {
+        if (link.getAttribute("href") === "#" + view.id) {
+            link.setAttribute("aria-current", "location");
+        } else {
+            link.removeAttribute("aria-current");
+        }
+    });
+    document.title = "CinePlay — " + viewNames[view.id];
+    closeMenu();
+    if (moveFocus) {
+        const heading = view.querySelector("h1, h2");
+        heading.setAttribute("tabindex", "-1");
+        heading.focus({ preventScroll: true });
+        window.scrollTo({ top: 0, behavior: "instant" });
+    }
 }
-window.addEventListener("hashchange", updateCurrentSection);
+window.addEventListener("hashchange", () => updateCurrentSection(true));
 updateCurrentSection();
 
 document.querySelector("#reservation-form").addEventListener("submit", (event) => {
