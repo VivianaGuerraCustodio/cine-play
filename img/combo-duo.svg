@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#30221b"/>
+      <stop offset="1" stop-color="#121212"/>
+    </linearGradient>
+    <linearGradient id="tub" x2="0" y2="1">
+      <stop stop-color="#ee3642"/>
+      <stop offset="1" stop-color="#99121c"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="320" cy="170" r="135" fill="#d4af37" opacity=".08"/>
+  <ellipse cx="320" cy="305" rx="215" ry="19" fill="#000" opacity=".35"/>
+  <path d="M202 132h202l-23 169H225z" fill="#f3e7d0"/>
+  <path d="M221 133h33l-7 166h-22zm72 0h34l-7 166h-23zm72 0h31l-22 166h-22z" fill="url(#tub)"/>
+  <path d="M188 136c0-13 15-22 34-22h158c19 0 34 9 34 22v13H188z" fill="#fff3db"/>
+  <g fill="#f0c55d">
+    <circle cx="217" cy="115" r="21"/><circle cx="254" cy="104" r="24"/><circle cx="291" cy="115" r="22"/>
+    <circle cx="328" cy="103" r="24"/><circle cx="365" cy="116" r="22"/><circle cx="397" cy="109" r="18"/>
+  </g>
+  <g>
+    <path d="M113 194h68l-9 105h-51z" fill="#c71925"/><path d="M117 194h60v15h-60z" fill="#f7f0e2"/>
+    <path d="m146 151 8 3-17 42-8-3z" fill="#d4af37"/>
+    <path d="M459 194h68l-9 105h-51z" fill="#c71925"/><path d="M463 194h60v15h-60z" fill="#f7f0e2"/>
+    <path d="m492 151 8 3-17 42-8-3z" fill="#d4af37"/>
+  </g>
+  <text x="320" y="338" fill="#e9d39b" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4" text-anchor="middle">COMBO DUO</text>
+</svg>

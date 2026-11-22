@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Descubre la cartelera de CinePlay, consulta horarios y disfruta del cine con amigos y familia.">
+    <meta name="description" content="Descubre la cartelera de CinePlay, reserva tu función y compra combos para disfrutar el cine sin hacer colas.">
     <title>CinePlay — Vive el cine</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
+    <script src="app.js" defer></script>
 </head>
 <body class="site-layout">
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
@@ -26,6 +26,7 @@
                     <li><a href="#cartelera">Galería</a></li>
                     <li><a href="#horarios">Horarios</a></li>
                     <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#combos">Combos</a></li>
                     <li><a href="#experiencia">Experiencia</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
@@ -74,7 +75,7 @@
                     <div class="card-copy"><p class="eyebrow">Acción</p><h3>La Odisea</h3><p>8:00 p. m.</p><a href="#horarios">Ver función <i class="bi bi-arrow-right" aria-hidden="true"></i></a></div>
                 </article>
             </section>
-            <h3 class="subheading">Preestrenos - Programación de demostración</h3>
+            <h3 class="subheading">Próximos estrenos</h3>
             <section class="cards" aria-label="Galería de películas">
 <article class="movie-card">
                     <img src="img/Verity.jpg" alt="Póster de Verity" width="1080" height="1600" loading="lazy" decoding="async">
@@ -98,7 +99,7 @@
             <p class="eyebrow">Organiza tu visita</p><h2 id="horarios-title">Salas y horarios</h2>
             <div class="table-container" tabindex="0" role="region" aria-label="Tabla de horarios con desplazamiento horizontal">
                 <table>
-                    <caption>Programación de demostración</caption>
+                    <caption>Funciones disponibles</caption>
                     <thead><tr><th scope="col">Sala</th><th scope="col">Película</th><th scope="col">Clasificación</th><th scope="col">Horario</th></tr></thead>
                     <tbody>
                         <tr><td>Sala 1</td><td>El Día de la Revelación</td><td>+14</td><td>5:00 p. m.</td></tr>
@@ -113,7 +114,7 @@
             <a class="button" href="#reservas">Simular reserva <i class="bi bi-ticket-perforated" aria-hidden="true"></i></a>
         </section>
         <section class="contacto container section" id="reservas" aria-labelledby="reservas-title">
-            <div><p class="eyebrow">Tu próxima función</p><h2 id="reservas-title">Reserva simulada</h2><p>Elige una película y su función. Precio de demostración: S/ 15.00 por entrada.</p><p class="form-note">No se realiza ningún cobro ni reserva real.</p></div>
+            <div><p class="eyebrow">Tu próxima función</p><h2 id="reservas-title">Reserva de entradas</h2><p>Elige una película y su función. Precio referencial: S/ 15.00 por entrada.</p><p class="form-note">Esta reserva es una simulación: no se realiza ningún cobro ni reserva real.</p></div>
             <div>
                 <form id="reservation-form">
                     <label for="funcion">Película y función</label>
@@ -156,6 +157,42 @@
                 <noscript>Activa JavaScript para probar el formulario de demostración.</noscript>
             </form>
         </section>
+        <section class="container section combos-section" id="combos" aria-labelledby="combos-title">
+            <div class="combos-heading">
+                <div>
+                    <p class="eyebrow">Elige tus favoritos</p>
+                    <h2 id="combos-title">Combos para disfrutar la función</h2>
+                    <p>Compra tus snacks antes de llegar al cine y disfruta tu película sin hacer colas.</p>
+                </div>
+                <button class="cart-jump-button" id="cart-jump-button" type="button" aria-controls="cart-panel">
+                    <i class="bi bi-bag" aria-hidden="true"></i>
+                    Mi carrito <span id="cart-count" aria-live="polite">0</span>
+                </button>
+            </div>
+            <div class="combo-catalog" id="combo-catalog" aria-label="Catálogo de combos"></div>
+            <section class="cart-panel" id="cart-panel" aria-labelledby="cart-title">
+                <div class="cart-heading">
+                    <div>
+                        <p class="eyebrow">Tu pedido</p>
+                        <h3 id="cart-title">Carrito de compras</h3>
+                    </div>
+                    <p id="cart-item-count" class="cart-item-count">0 productos</p>
+                </div>
+                <div class="cart-items" id="cart-items" aria-live="polite"></div>
+                <div class="cart-footer">
+                    <div class="cart-totals" aria-live="polite">
+                        <p>Subtotal <strong id="cart-subtotal">S/ 0.00</strong></p>
+                        <p class="cart-total">Total <strong id="cart-total">S/ 0.00</strong></p>
+                    </div>
+                    <p class="cart-note">Pedido simulado. No se realizan cobros en línea.</p>
+                    <div class="cart-actions">
+                        <button class="cart-clear-button" id="clear-cart-button" type="button" disabled>Vaciar carrito</button>
+                        <button class="button" id="checkout-button" type="button" disabled>Confirmar pedido <i class="bi bi-arrow-right" aria-hidden="true"></i></button>
+                    </div>
+                    <p class="cart-message" id="cart-message" aria-live="polite"></p>
+                </div>
+            </section>
+        </section>
     </main>
     <aside class="sidebar" aria-labelledby="sidebar-title">
         <div class="sidebar-panel">
@@ -167,7 +204,7 @@
         <div class="sidebar-panel">
             <i class="bi bi-ticket-perforated sidebar-icon" aria-hidden="true"></i>
             <h3>Planea una tarde de cine</h3>
-            <p>Prueba nuestra reserva de demostración desde S/ 15.00 por entrada.</p>
+            <p>Organiza tu próxima función con una reserva desde S/ 15.00 por entrada.</p>
             <a class="button" href="#reservas">Simular una reserva <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
         </div>
         <div class="sidebar-panel">
@@ -179,7 +216,7 @@
     </aside>
     <footer>
         <div class="container footer-inner">
-            <div><a class="brand" href="#inicio">CINE<span>PLAY</span></a><p>&copy; 2026 CinePlay. Todos los derechos reservados.</p><p>Proyecto académico · Reservas y contacto de demostración.</p></div>
+            <div><a class="brand" href="#inicio">CINE<span>PLAY</span></a><p>&copy; 2026 CinePlay. Todos los derechos reservados.</p><p>Historias, sabores y momentos para compartir.</p></div>
             <div class="social-icons" aria-label="Redes sociales de referencia">
                 <a href="https://www.instagram.com/" aria-label="Instagram (sitio general)"><i class="bi bi-instagram" aria-hidden="true"></i></a>
                 <a href="https://www.facebook.com/" aria-label="Facebook (sitio general)"><i class="bi bi-facebook" aria-hidden="true"></i></a>
@@ -197,6 +234,12 @@
             <dt>Entradas</dt><dd id="summary-count"></dd>
             <dt>Total simulado</dt><dd id="summary-total"></dd>
         </dl>
+        <div id="order-details" class="order-details" hidden>
+            <p><strong>Cliente:</strong> <span id="order-customer"></span></p>
+            <p><strong>Productos:</strong></p>
+            <ul id="order-summary-items"></ul>
+            <p class="order-total"><strong>Total:</strong> <span id="order-total"></span></p>
+        </div>
         <p id="simulation-timeout" class="form-note">Se cerrará automáticamente en 10 segundos. 🚀</p>
     </dialog>
 </body>

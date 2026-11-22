@@ -497,6 +497,13 @@ dd {
     background: var(--surface);
     color: var(--text);
     box-shadow: 0 1.5rem 4rem #0008;
+    opacity: 0;
+    transform: scale(.96);
+    transition: opacity .24s ease, transform .24s ease;
+}
+.simulation-modal[open].is-visible {
+    opacity: 1;
+    transform: scale(1);
 }
 .simulation-modal::backdrop {
     background: rgb(0 0 0 / 75%);
@@ -664,4 +671,260 @@ nav a[aria-current="location"] {
 .sidebar-panel .button {
     margin-top: auto;
     width: 100%;
+}
+
+.combos-section {
+    border-top: 1px solid #373737;
+}
+.combos-heading {
+    display: grid;
+    gap: 1.25rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+.combos-heading h2 {
+    margin-bottom: .75rem;
+}
+.combos-heading p:last-child {
+    margin-bottom: 0;
+}
+.cart-jump-button {
+    display: inline-flex;
+    justify-self: start;
+    align-items: center;
+    gap: .65rem;
+    padding: .8rem 1rem;
+    border: 1px solid #555;
+    border-radius: .65rem;
+    background: var(--surface);
+    color: var(--text);
+    font-weight: 600;
+}
+.cart-jump-button:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+}
+.cart-jump-button span {
+    display: grid;
+    min-width: 1.6rem;
+    min-height: 1.6rem;
+    place-items: center;
+    border-radius: 50%;
+    background: var(--accent);
+    color: #fff;
+    font-size: .85rem;
+}
+.combo-catalog {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+}
+.combo-card {
+    min-width: 0;
+    border: 1px solid #373737;
+    border-radius: 1rem;
+    background: var(--surface);
+    box-shadow: 0 .5rem 1.5rem #0003;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.combo-card > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+.combo-card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 14rem;
+    padding: 1.25rem;
+}
+.combo-card h3 {
+    margin-top: 0;
+    color: var(--gold);
+}
+.combo-card-content > p:not(.combo-price) {
+    margin-top: 0;
+}
+.combo-price {
+    margin: auto 0 1rem;
+    color: #fff;
+    font-size: 1.35rem;
+    font-weight: 700;
+}
+.combo-card-controls {
+    display: grid;
+    grid-template-columns: minmax(4.5rem, 1fr) minmax(4.5rem, 5rem);
+    align-items: center;
+    gap: .5rem;
+    width: 100%;
+}
+.combo-card-controls label {
+    display: block;
+    grid-column: 1 / -1;
+    margin-bottom: -.4rem;
+    color: var(--muted);
+    font-size: .9rem;
+}
+.combo-card-controls input {
+    min-width: 0;
+    padding: .65rem .75rem;
+}
+.combo-card-controls .button {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: .75rem .9rem;
+}
+.cart-panel {
+    margin-top: 2rem;
+    padding: 1.25rem;
+    border: 1px solid #373737;
+    border-radius: 1rem;
+    background: linear-gradient(145deg, #222, #171717);
+    scroll-margin-top: 1rem;
+}
+.cart-heading {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem 1rem;
+    border-bottom: 1px solid #373737;
+    padding-bottom: .75rem;
+}
+.cart-heading h3 {
+    margin: 0;
+}
+.cart-heading .eyebrow {
+    margin-top: 0;
+}
+.cart-item-count {
+    margin: 0;
+}
+.cart-items {
+    display: grid;
+    gap: .75rem;
+}
+.cart-empty {
+    margin: 0;
+    padding: 1.25rem .25rem;
+}
+.cart-item {
+    display: grid;
+    gap: .75rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #373737;
+}
+.cart-item-info h4 {
+    margin: 0;
+    font-size: 1.05rem;
+}
+.cart-item-info p {
+    margin: .25rem 0 0;
+    font-size: .9rem;
+}
+.cart-item-controls {
+    display: grid;
+    grid-template-columns: minmax(4.5rem, 1fr) minmax(4rem, 5rem);
+    align-items: center;
+    gap: .5rem;
+}
+.cart-item-controls label {
+    color: var(--muted);
+    font-size: .9rem;
+}
+.cart-item-controls input {
+    padding: .5rem;
+}
+.cart-line-total {
+    justify-self: start;
+}
+.cart-remove-button,
+.cart-clear-button {
+    border: 1px solid #666;
+    border-radius: .5rem;
+    padding: .55rem .75rem;
+    background: transparent;
+    color: var(--text);
+}
+.cart-remove-button:hover,
+.cart-clear-button:hover:not(:disabled) {
+    background: #373737;
+}
+.cart-footer {
+    display: grid;
+    gap: .75rem;
+    padding-top: 1rem;
+}
+.cart-totals p {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    margin: .35rem 0;
+}
+.cart-totals .cart-total {
+    padding-top: .65rem;
+    border-top: 1px solid #555;
+    color: #fff;
+    font-size: 1.15rem;
+}
+.cart-note,
+.cart-message {
+    margin: 0;
+    font-size: .9rem;
+}
+.cart-actions {
+    display: grid;
+    gap: .75rem;
+}
+.cart-actions .button {
+    width: 100%;
+}
+.cart-actions button:disabled {
+    cursor: not-allowed;
+    opacity: .5;
+}
+.order-details ul {
+    display: grid;
+    gap: .5rem;
+    padding-left: 1.25rem;
+}
+.order-total {
+    padding-top: .75rem;
+    border-top: 1px solid #555;
+    font-size: 1.1rem;
+}
+@media (min-width: 768px) {
+    .combos-heading {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+    .cart-jump-button {
+        justify-self: end;
+    }
+    .combo-catalog {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .cart-panel {
+        padding: 1.75rem;
+    }
+    .cart-item {
+        grid-template-columns: minmax(0, 1fr) auto;
+        align-items: center;
+    }
+    .cart-item-controls {
+        grid-template-columns: auto minmax(4.5rem, 5rem) auto auto;
+    }
+    .cart-actions {
+        grid-template-columns: auto minmax(12rem, auto);
+        justify-content: end;
+    }
+    .cart-actions .button {
+        width: auto;
+    }
+}
+@media (min-width: 1280px) {
+    .combo-catalog {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }
