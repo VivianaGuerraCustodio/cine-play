@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" role="img">
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1">
+      <stop stop-color="#2d201d"/>
+      <stop offset="1" stop-color="#121212"/>
+    </linearGradient>
+    <linearGradient id="sausage" x2="0" y2="1">
+      <stop stop-color="#e87536"/>
+      <stop offset="1" stop-color="#a33b20"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" rx="28" fill="url(#bg)"/>
+  <circle cx="320" cy="170" r="136" fill="#d4af37" opacity=".08"/>
+  <ellipse cx="320" cy="306" rx="211" ry="19" fill="#000" opacity=".35"/>
+  <path d="M92 235c35-72 188-102 269-52 28 17 33 47 4 67-60 41-210 56-261 28-18-10-23-26-12-43z" fill="#e9cc83"/>
+  <path d="M112 231c46-50 180-71 234-41 19 10 18 27-1 39-48 30-164 44-218 25-16-5-23-14-15-23z" fill="url(#sausage)"/>
+  <path d="M115 231c51-34 155-52 221-33" fill="none" stroke="#f4c44f" stroke-width="9" stroke-linecap="round"/>
+  <path d="M117 245c53-29 153-43 214-27" fill="none" stroke="#c71925" stroke-width="8" stroke-linecap="round"/>
+  <path d="M403 159h123l-17 140h-89z" fill="#f3e7d0"/>
+  <path d="M419 160h26l-5 138h-19zm49 0h26l-15 138h-20z" fill="#c71925"/>
+  <path d="M392 160c0-11 11-18 26-18h94c15 0 26 7 26 18v12H392z" fill="#fff3db"/>
+  <g fill="#eabf56">
+    <circle cx="416" cy="141" r="16"/><circle cx="443" cy="132" r="18"/><circle cx="471" cy="142" r="17"/>
+    <circle cx="499" cy="132" r="18"/><circle cx="526" cy="143" r="16"/>
+  </g>
+  <text x="320" y="338" fill="#e9d39b" font-family="Arial,sans-serif" font-size="17" font-weight="700" letter-spacing="4" text-anchor="middle">COMBO FAN</text>
+</svg>
